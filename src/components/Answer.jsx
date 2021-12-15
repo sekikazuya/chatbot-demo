@@ -9,10 +9,10 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Answer = (props) => {
-  // const classes = useStyles();
+  const classes = useStyles();
 
   return(
-      <Button variant="contained">
+      <Button variant="contained" onClick={() => props.select(props.content, props.nextId)}>
         {props.content}
       </Button>
   );
